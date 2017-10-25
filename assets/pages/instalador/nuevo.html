@@ -1,0 +1,299 @@
+	<div class="container">
+		<div class="row">
+			<h1 class="text-center text">Puntos a Revisar por el Instalador</h1>
+			<form action="[INGRESAR]" method="post" class="col-xs-10 col-xs-offset-1" autocomplete="off">
+				<div class="form-group">
+					<input type="hidden" name="fecha" class="form-control" value="[FECHA]" required="true">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label text-center text">Fecha: [FECHA]</label>
+				</div>
+
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+									Información General
+								</a>
+							</h4>
+						</div>
+
+						<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								<div class="form-group">
+									<label class="control-label text-center">Hora Entrada:</label>
+									<input type="time" name="horaEntrada" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Nombre Operador y/o Propietario:</label>
+									<input type="text" name="propietario" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Teléfono:</label>
+									<input type="text" name="telefono" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Vehículo Marca:</label>
+									<input type="text" name="marca" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Modelo:</label>
+									<input type="text" name="modelo" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Color:</label>
+									<input type="text" name="color" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Placas:</label>
+									<input type="text" name="placas" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Empresa:</label>
+									<input type="text" name="empresa" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">No. Bus:</label>
+									<input type="text" name="nBus" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Instalador:</label>
+									<input type="text" name="instalador" class="form-control" required="true">
+								</div>
+
+								<div class="form-group">
+									<label class="control-label">Lugar:</label>
+									<input type="text" name="lugar" class="form-control" required="true">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+							<h4 class="panel-title">
+								<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+									Check List
+								</a>
+							</h4>
+						</div>
+
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							<div class="panel-body">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label class="control-label">Claxon:</label>
+												<select name="claxon" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luces Intermitentes:</label>
+												<select name="lucesIntermitentes" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Faros:</label>
+												<select name="faros" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luces Tablero:</label>
+												<select name="lucesTablero" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Encendedor:</label>
+												<select name="encendedor" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Reloj:</label>
+												<select name="reloj" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Ventilador / calefaccion / AA:</label>
+												<select name="ventilador" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Limpiadores:</label>
+												<select name="limpiadores" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luces en las Placas:</label>
+												<select name="lucesPlacas" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Timbre:</label>
+												<select name="timbre" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-xs-6">
+											<div class="form-group">
+												<label class="control-label">Espejos Laterales:</label>
+												<select name="espejosLaterales" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Fugas de Aire:</label>
+												<select name="fugasAire" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Apertura puerta RR:</label>
+												<select name="aperturaRR" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Apertura puerta FR:</label>
+												<select name="aperturaFR" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luz Interior:</label>
+												<select name="luzInterior" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luz Freno:</label>
+												<select name="luzFreno" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luces Traseras:</label>
+												<select name="lucesTraceras" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luz Reversa:</label>
+												<select name="luzReversa" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Luces Navegacion:</label>
+												<select name="lucesNavegacion" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+
+											<div class="form-group">
+												<label class="control-label">Alarma reversa:</label>
+												<select name="alarmaReversa" class="form-control">
+													<option value="1">Si</option>
+													<option value="0">No</option>
+													<option value="2">N/A</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label text">Comentarios:</label>
+					<textarea name="comentarios" class="form-control" rows="10"></textarea>
+				</div>
+
+				<div class="form-group">
+					<button class="btn btn-primary">Aceptar</button>
+					<button class="btn btn-default">Limpiar</button>
+				</div>
+			</form>
+		</div>
+	</div>

@@ -1,0 +1,83 @@
+	<div class="container">
+		<div class="row reparaciones">
+			<h1 class="text-center">Relacion de Reparaciones</h1>
+			<form action="[INGRESAR]" method="post" class="col-xs-10 col-xs-offset-1" autocomplete="off">
+				<div class="form-group">
+					<input type="hidden" name="fecha" class="form-control" value="[FECHA]" required="true">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label text-center">Fecha: [FECHA]</label>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Unidad:</label>
+					<input type="text" name="unidad" class="form-control" required="true">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Empresa:</label>
+					<input type="text" name="empresa" class="form-control" required="true">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Falla:</label>
+					<input type="text" name="falla" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Tecnico:</label>
+					<input type="text" name="tecnico" class="form-control" required="true">
+				</div>
+
+				<div class="form-group">
+					<label>Pruebas:</label>
+				</div>
+
+				<div class="form-group">
+					<div class="col-xs-offset-2">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="conteo" value="4">
+								Conteo
+							</label>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-xs-offset-2">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="datos" value="2">
+								Datos
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-xs-offset-2">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="gps" value="1">
+								GPS
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label>Detalles de Reparacion:</label>
+					<textarea name="detalles" class="form-control" rows="6"></textarea>
+				</div>
+
+				<div class="form-group">
+					<div>
+						<button type="submit" class="btn btn-success">Aceptar</button>
+						<button type="reset" class="btn btn-default">Limpiar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
