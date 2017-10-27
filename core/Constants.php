@@ -17,12 +17,14 @@ $constModules = array(
 	'BOOTSTRAP_SCRIPT' => '../../assets/js/bootstrap.min.js', 
 	'JQUERY_SCRIPT' => '../../assets/js/jquery.min.js', 
 	'PAGE_STYLE' => '../../assets/css/styles.css', 
-	'INGRESAR' => 'ingresar.php'
+	'INICIO' => 'index.php',
+	'INGRESAR' => 'ingresar.php',
+	'NUEVO' => 'nuevo.php',
+	'MODIFICAR' => 'modificar.php'
 );
 
 $constInstalador = array(
-	'PAGE_SCRIPT' => '../../assets/js/instalador.js',
-	'INGRESAR' => 'ingresar.php'
+	'PAGE_SCRIPT' => '../../assets/js/instalador.js'
 );
 
 $constReparaciones = array(
