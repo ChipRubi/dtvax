@@ -1,28 +1,45 @@
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-8 col-md-offset-1">
-				<h2 class="text">Historial de Reparaciones</h2>
-			</div>
-
-			<div class="col-xs-4 col-md-2 text-right">
-				<h2><a href="[NUEVO]" class="btn btn-default">Nuevo</a></h2>
+			<div class="col-xs-10 col-xs-offset-1">
+				<h2 class="text">Historial de Reparaciones para [BUSQUEDA]</h2>
 			</div>
 		</div>
+
 		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset-1">
+			<div class="col-xs-5 col-xs-offset-1">
+				<form class="form-inline" action="[INICIO]" method="get" autocomplete="off">
+					<div class="form-group">
+						<button type="submit" class="btn btn-default">Buscar</button>
+						<input type="text" name="busqueda" class="form-control">
+					</div>
+				</form>
+			</div>
+
+			<div class="col-xs-5 text-right">
+				<a href="[NUEVO]" class="btn btn-primary">Nuevo</a>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-12">
 				<div class="table-responsive">
-					<table class="table table-bordered table-hover">
+					<table class="table table-condensed table-bordered">
 						<tr>
-							<th>Fecha</th>
-							<th>Unidad</th>
-							<th>Empresa</th>
-							<th>Falla</th>
-							<th>Conteo</th>
-							<th>Datos</th>
-							<th>GPS</th>
-							<th>Técnico</th>
-							<th>Detalles</th>
-							<th></th>
+							<th class="text-center" rowspan="2">Fecha</th>
+							<th class="text-center" rowspan="2">Unidad</th>
+							<th class="text-center" rowspan="2">Empresa</th>
+							<th class="text-center" rowspan="2">Falla</th>
+							<th class="text-center" colspan="3">Pruebas</th>
+							<th class="text-center" rowspan="2">Técnico</th>
+							<th class="text-center" rowspan="2">Detalles</th>
+							<th class="text-center" rowspan="2"></th>
+						</tr>
+						<tr>
+							<th class="text-center">Conteo</th>
+							<th class="text-center">Datos</th>
+							<th class="text-center">GPS</th>
 						</tr>
 						[TABLE]
 					</table>
