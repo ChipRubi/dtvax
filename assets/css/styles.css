@@ -1,5 +1,5 @@
 body{
-	background-color: rgba(0, 0, 0, 1) ;
+	background-color: rgba(255, 255, 255, 1) ;
 	background-image: url(../img/bg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -26,10 +26,6 @@ body{
 
 .panel-heading a:hover{
 	text-decoration: none;
-}
-
-.text, .reparaciones {
-	color: rgba(255, 255, 255, 0.9);
 }
 
 .table {

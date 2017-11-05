@@ -34,3 +34,13 @@ function MostrarConsulta(datos){
    	//enviando los valores
   	ajax.send("unidad="+unidad+"&empresa="+empresa)
 }
+
+function mostrarFormFecha() {
+	opcion = document.getElementById('opcion').value;
+	busqueda = document.getElementById('busqueda');
+	if (opcion == 'fecha') {
+		busqueda.type = 'date'
+	} else {
+		busqueda.type = 'text'
+	}
+}

@@ -2,9 +2,14 @@
 
 function getConnection(){
 	$dbHost = "localhost";
-	$dbUser = "root";
+
+    $dbUser = "root";
+	// $dbUser = "id3460579_chip";
+
 	$dbPass = "copacopa@mysql.com123";
-	$dbName = "dtvax";
+    
+    $dbName = "dtvax";
+	// $dbName = "id3460579_dtvax";
 
     $mysqli = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 	if ($mysqli->connect_errno) {

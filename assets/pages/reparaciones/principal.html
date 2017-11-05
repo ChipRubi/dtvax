@@ -1,21 +1,28 @@
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-10 col-xs-offset-1">
-				<h2 class="text">Historial de Reparaciones para [BUSQUEDA]</h2>
+			<div class="col-xs-12">
+				<h2 class="text">Historial de Reparaciones [BUSQUEDA]</h2>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-5 col-xs-offset-1">
+			<div class="col-xs-6">
 				<form class="form-inline" action="[INICIO]" method="get" autocomplete="off">
 					<div class="form-group">
 						<button type="submit" class="btn btn-default">Buscar</button>
-						<input type="text" name="busqueda" class="form-control">
+						<select class="form-control" name="opcion" id="opcion" onchange="mostrarFormFecha(); return false">
+							<option value="todo">Todo</option>
+							<option value="fecha">Fecha</option>
+							<option value="unidad">Unidad</option>
+							<option value="empresa">Empresa</option>
+							<option value="tecnico">Tecnico</option>
+						</select>
+						<input type="text" name="busqueda" class="form-control" id="busqueda">
 					</div>
 				</form>
 			</div>
 
-			<div class="col-xs-5 text-right">
+			<div class="col-xs-6 text-right">
 				<a href="[NUEVO]" class="btn btn-primary">Nuevo</a>
 			</div>
 		</div>
