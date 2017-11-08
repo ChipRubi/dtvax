@@ -5,6 +5,7 @@ $constPrincipal = array(
 	'BOOTSTRAP_STYLE' => 'assets/css/bootstrap.min.css', 
 	'BOOTSTRAP_SCRIPT' => 'assets/js/bootstrap.min.js', 
 	'JQUERY_SCRIPT' => 'assets/js/jquery.min.js', 
+	'AJAX_SCRIPT' => 'assets/js/ajax.js', 
 	'PAGE_STYLE' => 'assets/css/styles.css', 
 	'PAGE_SCRIPT' => 'assets/js/principal.js',
 	'EMPEZAR_INSTALADOR' => 'modules/instalador/',
@@ -18,6 +19,7 @@ $constModules = array(
 	'BOOTSTRAP_STYLE' => '../../assets/css/bootstrap.min.css', 
 	'BOOTSTRAP_SCRIPT' => '../../assets/js/bootstrap.min.js', 
 	'JQUERY_SCRIPT' => '../../assets/js/jquery.min.js', 
+	'AJAX_SCRIPT' => '../../assets/js/ajax.js', 
 	'PAGE_STYLE' => '../../assets/css/styles.css', 
 	'INICIO_MENU' => '../../',
 	'INSTALADOR_MENU' => '../../modules/instalador/',
@@ -36,7 +38,7 @@ $constReparaciones = array(
 	'PAGE_SCRIPT' => '../../assets/js/reparaciones.js'
 );
 
-$chekList = array('conteo', 'datos', 'gps');
+$checkList = array('conteo', 'datos', 'gps');
 
 /*$DBURL = "localhost";
 $DBUSER = "root";

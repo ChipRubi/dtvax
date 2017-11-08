@@ -1,22 +1,14 @@
-function objetoAjax(){
-	var xmlhttp=false;
-	try {
-		xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-	} catch (e) {
-		try {
-		   xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-		} catch (E) {
-			xmlhttp = false;
-  		}
-	}
+window.addEventListener('load', function () {
+	document.getElementById('btnAceptar').onclick = function () {
+		alert('No olvides revisar el SIM')
+	};
 
-	if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-		xmlhttp = new XMLHttpRequest();
-	}
-	return xmlhttp;
-}
+	document.getElementById('txtEmpresa').addEventListener('change', function() {
+		mostrarConsulta('consulta.php');
+	});
+});
 
-function MostrarConsulta(datos){
+function mostrarConsulta(datos){
 	divResultado = document.getElementById('resultado');
 
 	ajax=objetoAjax();
@@ -27,8 +19,8 @@ function MostrarConsulta(datos){
 		}
 	}
 
-	unidad = document.getElementById('unidad').value
-	empresa = document.getElementById('empresa').value
+	unidad = document.getElementById('txtUnidad').value
+	empresa = document.getElementById('txtEmpresa').value
 
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
    	//enviando los valores
@@ -37,7 +29,7 @@ function MostrarConsulta(datos){
 
 function mostrarFormFecha() {
 	opcion = document.getElementById('opcion').value;
-	busqueda = document.getElementById('busqueda');
+	busqueda = document.getElementById('txtBusqueda');
 	if (opcion == 'fecha') {
 		busqueda.type = 'date'
 	} else {

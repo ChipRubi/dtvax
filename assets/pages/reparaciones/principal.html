@@ -9,21 +9,22 @@
 			<div class="col-xs-6">
 				<form class="form-inline" action="[INICIO]" method="get" autocomplete="off">
 					<div class="form-group">
-						<button type="submit" class="btn btn-default">Buscar</button>
-						<select class="form-control" name="opcion" id="opcion" onchange="mostrarFormFecha(); return false">
+						<select class="form-control" name="opcion" id="opcion">
 							<option value="todo">Todo</option>
 							<option value="fecha">Fecha</option>
 							<option value="unidad">Unidad</option>
 							<option value="empresa">Empresa</option>
 							<option value="tecnico">Tecnico</option>
 						</select>
-						<input type="text" name="busqueda" class="form-control" id="busqueda">
+						<input type="text" name="busqueda" id="txtBusqueda" class="form-control">
+						<button type="submit" class="btn btn-default">Buscar</button>
 					</div>
 				</form>
 			</div>
 
 			<div class="col-xs-6 text-right">
-				<a href="[NUEVO]" class="btn btn-primary">Nuevo</a>
+				<a href="[NUEVO]" class="btn btn-success">Nuevo</a>
+				<a href="[IMPRIMIR]" class="btn btn-warning [HIDE]" target="_blank">Imprimir</a>
 			</div>
 		</div>
 
@@ -41,8 +42,8 @@
 							<th class="text-center" colspan="3">Pruebas</th>
 							<th class="text-center" rowspan="2">Técnico</th>
 							<th class="text-center" rowspan="2">Detalles</th>
-							<th class="text-center" rowspan="2"></th>
 						</tr>
+						
 						<tr>
 							<th class="text-center">Conteo</th>
 							<th class="text-center">Datos</th>
@@ -54,3 +55,10 @@
 			</div>
 		</div>
 	</div>
+	<script>
+		window.addEventListener('load', function () {
+			document.getElementById('opcion').addEventListener('change', function() {
+				mostrarFormFecha();
+			});
+		});
+	</script>

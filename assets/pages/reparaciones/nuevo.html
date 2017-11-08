@@ -4,18 +4,18 @@
 			<form action="[INGRESAR]" method="post" class="col-xs-10 col-xs-offset-1" autocomplete="off">
 
 				<div class="form-group">
-					<label class="control-label text-center">Fecha de Hoy: [FECHA]</label>
-					<input type="date" name="fecha" class="form-control" required="true">
+					<label class="control-label text-center">Fecha:</label>
+					<input type="date" name="fecha" id="txtFecha" class="form-control" required="true">
 				</div>
 
 				<div class="form-group">
 					<label class="control-label">Unidad:</label>
-					<input type="text" name="unidad" class="form-control" required="true" id="unidad">
+					<input type="text" name="unidad" id="txtUnidad" class="form-control" required="true">
 				</div>
 
 				<div class="form-group">
 					<label class="control-label">Empresa:</label>
-					<select name="empresa" class="form-control" onchange="MostrarConsulta('consulta.php'); return false" id="empresa">
+					<select name="empresa" id="txtEmpresa" class="form-control">
 						<option value=""></option>
 						<option value="ALM Roberto">ALM Roberto</option>
 						<option value="ALM Evo">ALM Evo</option>
@@ -87,7 +87,7 @@
 
 				<div class="form-group">
 					<div>
-						<button type="submit" class="btn btn-primary">Aceptar</button>
+						<button type="submit" id="btnAceptar" class="btn btn-primary">Aceptar</button>
 						<a href="[INICIO]" class="btn btn-danger">Cancelar</a>
 						<button type="reset" class="btn btn-default">Limpiar</button>
 					</div>
@@ -102,3 +102,9 @@
 			</table>
 		</div>
 	</div>
+
+	<script>
+		window.onload = function() {
+			document.getElementById('txtFecha').value = '[FECHA]';
+		};
+	</script>

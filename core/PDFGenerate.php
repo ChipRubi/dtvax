@@ -96,6 +96,12 @@ class PDF extends FPDF
 				$this->SetFillColor(255, 255, 255);
 				$this->SetFont('Arial', 'B', 8);
 				$this->Cell(30, 10, $dato['tecnico'], 1, 0, 'C');
+
+				// if (strlen($dato['detalles']) > 50) {
+				// 	$this->MultiCell(70, 5, $dato['detalles'], 1, 'J');
+				// } else {
+				// 	$this->MultiCell(70, 10, $dato['detalles'], 1, 'J');
+				// }
 				$this->Cell(70, 10, $dato['detalles'], 1, 0, 'J');
 				$this->Ln();
 			}
