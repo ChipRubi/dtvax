@@ -1,11 +1,15 @@
 window.addEventListener('load', function () {
 	document.getElementById('btnAceptar').onclick = function () {
-		alert('No olvides revisar el SIM')
+		alert('No olvides revisar el SIM');
 	};
 
 	document.getElementById('txtEmpresa').addEventListener('change', function() {
 		mostrarConsulta('consulta.php');
 	});
+
+	document.getElementById('btnNuevo').onclick = function() {
+		alert('No olvides revisar el SIM');
+	};
 });
 
 function mostrarConsulta(datos){

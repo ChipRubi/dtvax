@@ -7,7 +7,7 @@
 
 				<div class="form-group">
 					<label class="control-label text-center">Fecha:</label>
-					<input type="date" name="fecha" class="form-control" value="[FECHA]" disabled="true">
+					<input type="date" class="form-control" value="[FECHA]" disabled="true">
 				</div>
 
 				<div class="form-group">
@@ -17,12 +17,16 @@
 
 				<div class="form-group">
 					<label class="control-label">Empresa:</label>
-					<input type="text" name="empresa" class="form-control" value="[EMPRESA]" required="true">
+					<select name="idEmpresa" class="form-control">
+						[SELECT_EMPRESA]
+					</select>
 				</div>
 
 				<div class="form-group">
 					<label class="control-label">Tecnico:</label>
-					<input type="text" name="tecnico" class="form-control" value="[TECNICO]" required="true">
+					<select name="idTecnico" class="form-control">
+						[SELECT_TECNICO]
+					</select>
 				</div>
 
 				<div class="form-group">
