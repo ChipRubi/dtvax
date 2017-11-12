@@ -24,11 +24,11 @@ function mostrarConsulta(datos){
 	}
 
 	unidad = document.getElementById('txtUnidad').value
-	empresa = document.getElementById('txtEmpresa').value
+	idEmpresa = document.getElementById('txtEmpresa').value
 
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
    	//enviando los valores
-  	ajax.send("unidad="+unidad+"&empresa="+empresa)
+  	ajax.send("unidad="+unidad+"&idEmpresa="+idEmpresa)
 }
 
 function mostrarFormFecha() {

@@ -1,28 +1,34 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h2 class="text">Historial de Reparaciones [BUSQUEDA]</h2>
+				<h4 class="text">Historial de Reparaciones [BUSQUEDA]</h4>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-xs-6">
-				<form class="form-inline" action="[INICIO]" method="get" autocomplete="off">
+			<div class="col-xs-7">
+				<form class="" action="[INICIO]" method="get" autocomplete="off">
 					<div class="form-group">
-						<select class="form-control" name="opcion" id="opcion">
-							<option value="todo">Todo</option>
-							<option value="fecha">Fecha</option>
-							<option value="unidad">Unidad</option>
-							<option value="nombreEmpresa">Empresa</option>
-							<option value="tecnico">Tecnico</option>
-						</select>
-						<input type="text" name="busqueda" id="txtBusqueda" class="form-control">
-						<button type="submit" class="btn btn-default">Buscar</button>
+						<div class="input-field col-md-4">
+							<select class="form-control" name="opcion" id="opcion">
+								<option value="fecha">Fecha</option>
+								<option value="unidad">Unidad</option>
+								<option value="nombreEmpresa">Empresa</option>
+								<option value="tecnico">Tecnico</option>
+								<option value="todo">Todo</option>
+							</select>
+						</div>
+						<div class="input-field col-md-6">
+							<input type="date" name="busqueda" id="txtBusqueda" class="form-control">
+						</div>
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-default">Buscar</button>
+						</div>
 					</div>
 				</form>
 			</div>
 
-			<div class="col-xs-6 text-right">
+			<div class="col-xs-5 text-right">
 				<a href="[NUEVO]" id="btnNuevo" class="btn btn-primary" onclick="alert('No olvides revisar el sim');">Nuevo</a>
 				<a href="[IMPRIMIR]" class="btn btn-warning [HIDE]" target="_blank">Imprimir</a>
 			</div>

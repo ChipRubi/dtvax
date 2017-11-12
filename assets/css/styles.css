@@ -7,6 +7,11 @@ body{
 	background-attachment: fixed;
 }
 
+label {
+	color: rgba(0, 0, 0, 1);
+	font-size: 1rem;
+}
+
 .jumbotron{
 	background-color: rgba(255, 255, 255, 0.8) ;
 }
@@ -30,4 +35,12 @@ body{
 
 .table {
 	background: rgba(255, 255, 255, 1);
+}
+
+.login{
+	padding-bottom: 50px;
+}
+
+.jumbotron p{
+	font-weight: 300;
 }

@@ -4,7 +4,7 @@ function getConnection(){
 	$dbHost = "localhost";
 
     $dbUser = "root";
-	$dbUser = "id3460579_chip";
+	// $dbUser = "id3460579_chip";
 
 	$dbPass = "copacopa@mysql.com123";
 	$dbName = "id3460579_dtvax";

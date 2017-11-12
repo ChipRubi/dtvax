@@ -1,47 +1,74 @@
 <?php 
 
-$constPrincipal = array(
-	'ICON' => 'assets/img/dtvax_icon.png',
-	'BOOTSTRAP_STYLE' => 'assets/css/bootstrap.min.css', 
-	'BOOTSTRAP_SCRIPT' => 'assets/js/bootstrap.min.js', 
-	'JQUERY_SCRIPT' => 'assets/js/jquery.min.js', 
-	'AJAX_SCRIPT' => 'assets/js/ajax.js', 
-	'PAGE_STYLE' => 'assets/css/styles.css', 
-	'PAGE_SCRIPT' => 'assets/js/principal.js',
-	'EMPEZAR_INSTALADOR' => 'modules/instalador/',
-	'INFORME_INSTALADOR' => 'modules/instalador/informe.php',
-	'EMPEZAR_REPARACIONES' => 'modules/reparaciones/',
-	'INFORME_REPARACIONES' => 'modules/reparaciones/informe.php'
+require_once 'Config.php';
+
+function addUrlToArrayValues($arreglo){
+	foreach ($arreglo as $clave => $valor) {
+		$arreglo[$clave] = $GLOBALS['config']['base_url'].$valor;
+	}
+	return $arreglo;
+}
+
+function addUrlToString($cadena=''){
+	$cadena = $GLOBALS['config']['base_url'].$cadena;
+	return $cadena;
+}
+
+// Direccion de archivos
+$filesRoutes = array(
+	'temp' => 'assets/temp/',
+	'pages' => 'assets/pages/'
 );
 
-$constModules = array(
-	'ICON' => '../../assets/img/dtvax_icon.png',
-	'BOOTSTRAP_STYLE' => '../../assets/css/bootstrap.min.css', 
-	'BOOTSTRAP_SCRIPT' => '../../assets/js/bootstrap.min.js', 
-	'JQUERY_SCRIPT' => '../../assets/js/jquery.min.js', 
-	'AJAX_SCRIPT' => '../../assets/js/ajax.js', 
-	'PAGE_STYLE' => '../../assets/css/styles.css', 
-	'INICIO_MENU' => '../../',
-	'INSTALADOR_MENU' => '../../modules/instalador/',
-	'REPARACIONES_MENU' => '../../modules/reparaciones/',
-	'INICIO' => 'index.php',
-	'INGRESAR' => 'ingresar.php',
-	'NUEVO' => 'nuevo.php',
-	'MODIFICAR' => 'modificar.php'
+$filesReplace = array(
+	'bootstrap_style' => 'assets/css/bootstrap.min.css', 
+	'bootstrap_script' => 'assets/js/bootstrap.min.js', 
+	'jquery_script' => 'assets/js/jquery.min.js', 
+	'ajax_script' => 'assets/js/ajax.js',
+	'mdb_style' => 'assets/css/mdb.css', 
+	'mdb_script' => 'assets/js/mdb.min.js',
+	'page_style' => 'assets/css/styles.css', 
+
+	'inicio_menu' => '',
+	'instalador_menu' => 'modules/instalador/',
+	'reparaciones_menu' => 'modules/reparaciones/',
+
+	'icon' => 'assets/img/dtvax_icon.png',
+	'logo' => 'assets/img/dtvax_logo.png',
+	'brand' => 'assets/img/dtvax_brand.png',
+	'original' => 'assets/img/dtvax_original.png',
+
+	'close_session' => 'core/session/closeSession.php'
 );
 
-$constInstalador = array(
-	'PAGE_SCRIPT' => '../../assets/js/instalador.js'
+// Direccion de archivos en los modulos
+$filesModules = array(
+	'inicio' => 'index.php',
+	'ingresar' => 'ingresar.php',
+	'nuevo' => 'nuevo.php',
+	'modificar' => 'modificar.php'
 );
 
-$constReparaciones = array(
-	'PAGE_SCRIPT' => '../../assets/js/reparaciones.js'
+$checkListPruebas = array(
+	'conteo', 
+	'datos', 
+	'gps'
 );
 
-$checkList = array('conteo', 'datos', 'gps');
+// Diccionarios de modulos
+$usuariosPrincipal = array(
+	'empezar_reparaciones' => 'modules/reparaciones/',
+	'informe_reparaciones' => 'modules/reparaciones/informe.php',
+	'empezar_instalacion' => 'modules/instalador/',
+	'informe_instalacion' => 'modules/instalador/informe.php',
+);
+$usuariosLogin = array('login_action' => 'core/session/initSession.php');
+$reparaciones = array('page_script' => 'assets/js/reparaciones.js');
 
-/*$DBURL = "localhost";
-$DBUSER = "root";
-$DBPASS = "copacopa@mysql.com123";
-$DBNAME = "dtvax";*/
+// Añadir URL
+$filesReplace = addUrlToArrayValues($filesReplace);
+$usuariosPrincipal = addUrlToArrayValues($usuariosPrincipal);
+$usuariosLogin = addUrlToArrayValues($usuariosLogin);
+$reparaciones = addUrlToArrayValues($reparaciones);
+
 ?>
