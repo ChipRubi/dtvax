@@ -1,6 +1,6 @@
 <?php 
-require_once '/../Constants.php';
-require_once '/../DBConnection.php';
+require_once 'Constants.php';
+require_once 'DBConnection.php';
 
 /**
 * Clase que gestiona el logeo de usuarios
@@ -38,7 +38,7 @@ class Session {
 		if (!isset($_SESSION['sessionId'])) {
 			header('Location: '.$GLOBALS['config']['base_url'].'modules/usuarios/login.php');
 		} else {
-			header('Location: '.$GLOBALS['config']['base_url'].'modules/usuarios/principal.php');
+			header('Location: '.$GLOBALS['config']['base_url'].'modules/usuarios/');
 		}
 	}
 }

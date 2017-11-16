@@ -1,3 +1,8 @@
+	<style>
+		#txtUnidad, #txtEmpresa, #txtBusqueda {
+			display: none;
+		}
+	</style>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
@@ -9,17 +14,21 @@
 			<div class="col-xs-7">
 				<form class="" action="[INICIO]" method="get" autocomplete="off">
 					<div class="form-group">
-						<div class="input-field col-md-4">
+						<div class="input-field col-md-3">
 							<select class="form-control" name="opcion" id="opcion">
 								<option value="fecha">Fecha</option>
 								<option value="unidad">Unidad</option>
-								<option value="nombreEmpresa">Empresa</option>
-								<option value="tecnico">Tecnico</option>
 								<option value="todo">Todo</option>
 							</select>
 						</div>
-						<div class="input-field col-md-6">
-							<input type="date" name="busqueda" id="txtBusqueda" class="form-control">
+						<div class="input-field col-md-7">
+							<input type="date" name="fecha" id="txtFecha" class="form-control">
+							<input type="text" name="unidad" id="txtUnidad" class="form-control" placeholder="Unidad">
+							<select class="form-control" name="empresa" id="txtEmpresa" placeholder="Empresa">
+								<option value="">Empresa</option>
+								[SELECT_EMPRESA]
+							</select>
+							<input type="text" name="busqueda" id="txtBusqueda" class="form-control">
 						</div>
 						<div class="col-md-2">
 							<button type="submit" class="btn btn-default">Buscar</button>
@@ -29,7 +38,7 @@
 			</div>
 
 			<div class="col-xs-5 text-right">
-				<a href="[NUEVO]" id="btnNuevo" class="btn btn-primary" onclick="alert('No olvides revisar el sim');">Nuevo</a>
+				<a href="[NUEVO]" id="btnNuevo" class="btn btn-primary">Nuevo</a>
 				<a href="[IMPRIMIR]" class="btn btn-warning [HIDE]" target="_blank">Imprimir</a>
 			</div>
 		</div>
@@ -62,10 +71,3 @@
 			</div>
 		</div>
 	</div>
-	<script>
-		window.addEventListener('load', function () {
-			document.getElementById('opcion').addEventListener('change', function() {
-				mostrarFormFecha();
-			});
-		});
-	</script>

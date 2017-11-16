@@ -1,5 +1,5 @@
 <?php 
-require_once 'core/session/LoginUsuarios.php';
+require_once 'core/LoginUsuarios.php';
 
 $session = new Session();
 $session->checkForIndex();

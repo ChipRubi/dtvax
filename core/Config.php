@@ -1,7 +1,7 @@
 <?php 
 
 // Direccion principal del sitio
-$config = array('base_url' => 'http://localhost/dtvax/');
+$config = array('base_url' => 'http://localhost/Dtvax/');
 
 // Configuracion de la base de datos
 $db = array(

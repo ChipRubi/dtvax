@@ -15,10 +15,10 @@ class View {
 	private $dictionary;
 
 	public function __construct($page='', $dictionary){
-		$this->header = file_get_contents($GLOBALS['config']['base_url'].$GLOBALS['filesRoutes']['temp'].'header.html');
-		$this->menu = file_get_contents($GLOBALS['config']['base_url'].$GLOBALS['filesRoutes']['temp'].'menu.html');
-		$this->footer = file_get_contents($GLOBALS['config']['base_url'].$GLOBALS['filesRoutes']['temp'].'footer.html');
-		$this->body = file_get_contents($GLOBALS['config']['base_url'].$GLOBALS['filesRoutes']['pages'].$page.'.html');
+		$this->header = file_get_contents($GLOBALS['filesRoutes']['temp'].'header.html');
+		$this->menu = file_get_contents($GLOBALS['filesRoutes']['temp'].'menu.html');
+		$this->footer = file_get_contents($GLOBALS['filesRoutes']['temp'].'footer.html');
+		$this->body = file_get_contents($GLOBALS['filesRoutes']['pages'].$page.'.html');
 		$this->dictionary = $dictionary;
 	}
 
@@ -73,6 +73,14 @@ class View {
 	public function addArrayToDictionary($vArray){
 		foreach ($vArray as $key => $value) {
 			$this->dictionary[$key] = $value;
+		}
+	}
+
+	public function addScriptToDictionary($script=''){
+		if ($script == '') {
+			$this->dictionary['page_script'] = '';
+		} else {
+			$this->dictionary['page_script'] = '<script src="'.$GLOBALS['filesRoutes']['js'].$script.'.js"></script>';
 		}
 	}
 

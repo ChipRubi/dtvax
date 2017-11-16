@@ -1,6 +1,6 @@
 <?php 
 
-require_once '../../core/session/checkSession.php';
+require_once '../../core/checkSession.php';
 require_once '../../core/Interface.php';
 
 $usuarios_principal_view = new View('usuarios/principal', $filesReplace);

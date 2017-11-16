@@ -16,8 +16,11 @@ function addUrlToString($cadena=''){
 
 // Direccion de archivos
 $filesRoutes = array(
-	'temp' => 'assets/temp/',
-	'pages' => 'assets/pages/'
+	'css' => 'assets/css/',
+	'js' => 'assets/js/',
+	'img' => 'assets/img/',
+	'pages' => 'assets/pages/',
+	'temp' => 'assets/temp/'
 );
 
 $filesReplace = array(
@@ -38,7 +41,7 @@ $filesReplace = array(
 	'brand' => 'assets/img/dtvax_brand.png',
 	'original' => 'assets/img/dtvax_original.png',
 
-	'close_session' => 'core/session/closeSession.php'
+	'close_session' => 'core/closeSession.php'
 );
 
 // Direccion de archivos en los modulos
@@ -62,11 +65,12 @@ $usuariosPrincipal = array(
 	'empezar_instalacion' => 'modules/instalador/',
 	'informe_instalacion' => 'modules/instalador/informe.php',
 );
-$usuariosLogin = array('login_action' => 'core/session/initSession.php');
-$reparaciones = array('page_script' => 'assets/js/reparaciones.js');
+$usuariosLogin = array('login_action' => 'core/initSession.php');
+$reparaciones = array('page_script' => 'assets/js/reparaciones/reparaciones.js');
 
 // Añadir URL
 $filesReplace = addUrlToArrayValues($filesReplace);
+$filesRoutes = addUrlToArrayValues($filesRoutes);
 $usuariosPrincipal = addUrlToArrayValues($usuariosPrincipal);
 $usuariosLogin = addUrlToArrayValues($usuariosLogin);
 $reparaciones = addUrlToArrayValues($reparaciones);

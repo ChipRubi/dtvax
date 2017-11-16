@@ -6,10 +6,6 @@ window.addEventListener('load', function () {
 	document.getElementById('txtEmpresa').addEventListener('change', function() {
 		mostrarConsulta('consulta.php');
 	});
-
-	document.getElementById('btnNuevo').onclick = function() {
-		alert('No olvides revisar el SIM');
-	};
 });
 
 function mostrarConsulta(datos){
@@ -29,14 +25,4 @@ function mostrarConsulta(datos){
 	ajax.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
    	//enviando los valores
   	ajax.send("unidad="+unidad+"&idEmpresa="+idEmpresa)
-}
-
-function mostrarFormFecha() {
-	opcion = document.getElementById('opcion').value;
-	busqueda = document.getElementById('txtBusqueda');
-	if (opcion == 'fecha') {
-		busqueda.type = 'date'
-	} else {
-		busqueda.type = 'text'
-	}
 }
