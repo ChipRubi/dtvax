@@ -1,0 +1,73 @@
+	<style>
+		#txtUnidad, #txtEmpresa {
+			display: none;
+		}
+	</style>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h4 class="text">Localizadores</h4>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-7">
+				<form action="[INICIO]" method="get" autocomplete="off">
+					<div class="form-group">
+						<div class="input-field col-md-3">
+							<select class="form-control" name="opcion" id="opcion">
+								<option value="fecha">Fecha</option>
+								<option value="unidad">Unidad</option>
+								<option value="todo">Todo</option>
+							</select>
+						</div>
+						<div class="input-field col-md-7">
+							<input type="date" name="fecha" id="txtFecha" class="form-control">
+							<input type="text" name="unidad" id="txtUnidad" class="form-control" placeholder="Unidad">
+							<select class="form-control" name="empresa" id="txtEmpresa" placeholder="Empresa">
+								<option value="">Empresa</option>
+								[SELECT_EMPRESA]
+							</select>
+						</div>
+						<div class="col-md-2">
+							<button type="submit" class="btn btn-default"><span class="fas fa-search"></span> Buscar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="col-xs-5 text-right">
+				<a href="[NUEVO]" id="btnNuevo" class="btn btn-primary"><span class="fas fa-file"></span> Nuevo</a>
+				<a href="[EXCEL]" class="btn btn-success [HIDE]" target="_blank"><span class="fas fa-file-excel"></span> Excel</a>
+				<a href="[PDF]" class="btn btn-danger [HIDE]" target="_blank"><span class="fas fa-file-pdf"></span> PDF</a>
+			</div>
+		</div>
+
+		<br>
+
+		<div class="row table-responsive">
+			<div class="col-xs-12">
+				<table class="table table-condensed table-bordered table-striped">
+					<tr>
+						<th class="text-center" rowspan="2">#</th>
+						<th class="text-center" rowspan="2">Fecha</th>
+						<th class="text-center" rowspan="2">Empresa</th>
+						<th class="text-center" rowspan="2">Unidad</th>
+						<th class="text-center" rowspan="2">Placas</th>
+						<th class="text-center" rowspan="2">IMEI</th>
+						<th class="text-center" rowspan="2">Usuario</th>
+						<th class="text-center" rowspan="2">Contraseña</th>
+						<th class="text-center" colspan="2">Pruebas</th>
+						<th class="text-center" rowspan="2"></th>
+						<th class="text-center" rowspan="2"></th>
+					</tr>
+					
+					<tr>
+						<th class="text-center">Corte</th>
+						<th class="text-center">GPS</th>
+					</tr>
+					[TABLE]
+				</table>
+			</div>
+		</div>
+	</div>

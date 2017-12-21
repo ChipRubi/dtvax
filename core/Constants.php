@@ -1,6 +1,7 @@
 <?php 
 
-require_once 'Config.php';
+// Direccion principal del sitio
+$config = array('base_url' => 'http://localhost/dtvax/');
 
 function addUrlToArrayValues($arreglo){
 	foreach ($arreglo as $clave => $valor) {
@@ -20,7 +21,8 @@ $filesRoutes = array(
 	'js' => 'assets/js/',
 	'img' => 'assets/img/',
 	'pages' => 'assets/pages/',
-	'temp' => 'assets/temp/'
+	'temp' => 'assets/temp/',
+	'mod' => 'modules/'
 );
 
 $filesReplace = array(
@@ -33,8 +35,10 @@ $filesReplace = array(
 	'page_style' => 'assets/css/styles.css', 
 
 	'inicio_menu' => '',
-	'instalador_menu' => 'modules/instalador/',
 	'reparaciones_menu' => 'modules/reparaciones/',
+	'instalaciones_menu' => 'modules/instalaciones/',
+	'localizadores_menu' => 'modules/localizadores/',
+	'estadisticas_menu' => 'modules/estadisticas/',
 
 	'icon' => 'assets/img/dtvax_icon.png',
 	'logo' => 'assets/img/dtvax_logo.png',
@@ -58,21 +62,8 @@ $checkListPruebas = array(
 	'gps'
 );
 
-// Diccionarios de modulos
-$usuariosPrincipal = array(
-	'empezar_reparaciones' => 'modules/reparaciones/',
-	'informe_reparaciones' => 'modules/reparaciones/informe.php',
-	'empezar_instalacion' => 'modules/instalador/',
-	'informe_instalacion' => 'modules/instalador/informe.php',
-);
-$usuariosLogin = array('login_action' => 'core/initSession.php');
-$reparaciones = array('page_script' => 'assets/js/reparaciones/reparaciones.js');
-
 // Añadir URL
 $filesReplace = addUrlToArrayValues($filesReplace);
 $filesRoutes = addUrlToArrayValues($filesRoutes);
-$usuariosPrincipal = addUrlToArrayValues($usuariosPrincipal);
-$usuariosLogin = addUrlToArrayValues($usuariosLogin);
-$reparaciones = addUrlToArrayValues($reparaciones);
 
 ?>

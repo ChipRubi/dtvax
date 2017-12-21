@@ -1,0 +1,98 @@
+<div class="container">
+	<div class="row">
+		<h2>Estadisticas [TITULO]</h2>
+	</div>
+
+	<div class="row">
+		<form action="[INICIO]" method="get" class="form-inline">
+			<div class="form-group">
+				<select name="opcion" class="form-control">
+					<option value="reparaciones">Reparaciones</option>
+					<option value="instalaciones">Instalaciones</option>
+				</select>
+
+				<select name="fecha" class="form-control">
+					<option value="dia">Dia</option>
+					<option value="mes">Mes</option>
+					<option value="anio">Año</option>
+					<option value="todo">Todo</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Enviar" class="btn btn-default">
+			</div>
+		</form>
+	</div>
+	
+	<div class="row">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h4 class="text-center">[TITULO_TECNICO]</h4>
+			</div>
+			<div class="panel-body">
+				<canvas id="tecnicosChart" width="40" height="15"></canvas>
+			</div>
+		</div>
+
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<h4 class="text-center">Buses enviados por cada empresa</h4>
+			</div>
+			<div class="panel-body">
+				<canvas id="empresasChart" width="40" height="15"></canvas>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="[CHART]"></script>
+<script>
+	var tecnicos = document.getElementById("tecnicosChart").getContext('2d');
+	var tecnicosChart = new Chart(tecnicos, {
+		type: 'horizontalBar',
+		data: {
+			labels: [LABELS_TECNICO],
+			datasets: [{
+				label: '[OPCION]',
+				data: [DATA_TECNICO],
+				backgroundColor: [BGCOLOR_TECNICO],
+				borderColor: [BDRCOLOR_TECNICO],
+				borderWidth: 1,
+			}]
+		},
+		options: {
+			scales: {
+				xAxes: [{
+					ticks: {
+						beginAtZero:true,
+					}
+				}]
+			}
+		}
+	});
+
+	var empresas = document.getElementById("empresasChart").getContext('2d');
+	var empresasChart = new Chart(empresas, {
+		type: 'bar',
+		data: {
+			labels: [LABELS_EMPRESA],
+			datasets: [{
+				label: 'Buses',
+				data: [DATA_EMPRESA],
+				backgroundColor: [BGCOLOR_EMPRESA],
+				borderColor: [BDRCOLOR_EMPRESA],
+				borderWidth: 1,
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						beginAtZero:true,
+					}
+				}]
+			}
+		}
+	});
+</script>

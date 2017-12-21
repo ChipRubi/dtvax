@@ -14,9 +14,17 @@
 
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="[REPARACIONES_MENU]">Relación de Reparaciones</a></li>
-					<li><a href="[INSTALADOR_MENU]">Revisión del Instalador</a></li>
-					<li><a href="[CLOSE_SESSION]">Salir</a></li>
+					<li><a href="[REPARACIONES_MENU]"><span class="fas fa-cogs"></span> Reparaciones</a></li>
+					<li><a href="[INSTALACIONES_MENU]"><span class="fas fa-wrench"></span> Instalaciones</a></li>
+					[LOCALIZADORES]
+					<li><a href="[ESTADISTICAS_MENU]"><span class="fas fa-chart-bar"></span> Estadisticas</a></li>
+					[ADMINISTRADOR]
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fas fa-user"></span> [USER_NAME] <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="[CLOSE_SESSION]"><span class="fas fa-sign-out-alt"></span> Salir</a></li>
+						</ul>
+					</li>
 				</ul>
 			</div>
 		</div>

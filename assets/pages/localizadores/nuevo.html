@@ -1,0 +1,85 @@
+	<div class="container">
+		<div class="row">
+			<h4 class="text-center">Localizadores</h1>
+			<form action="[INGRESAR]" method="post" class="col-xs-10 col-xs-offset-1 form" autocomplete="off">
+
+				<div class="form-group">
+					<label class="control-label text-center">Fecha:</label>
+					<input type="date" name="fecha" id="txtFecha" class="form-control" required>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Unidad:</label>
+					<input type="text" name="unidad" id="txtUnidad" class="form-control" required minlength="3">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Placas:</label>
+					<input type="text" name="placas" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">IMEI:</label>
+					<input type="text" name="imei" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Empresa:</label>
+					<select name="idEmpresa" id="txtEmpresa" class="form-control" required>
+						<option value=""></option>
+						[SELECT_EMPRESA]
+					</select>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Usuario:</label>
+					<input type="text" name="usuario" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label class="control-label">Contraseña:</label>
+					<input type="text" name="password" class="form-control">
+				</div>
+
+				<div class="form-group">
+					<label>Pruebas:</label>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-xs-offset-2">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="datos" value="2">
+								Corte
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-xs-offset-2">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="gps" value="1">
+								GPS
+							</label>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div>
+						<button type="submit" id="btnAceptar" class="btn btn-primary">Aceptar</button>
+						<a href="[INICIO]" class="btn btn-danger">Cancelar</a>
+						<button type="reset" class="btn btn-default">Limpiar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		window.onload = function() {
+			document.getElementById('txtFecha').value = '[FECHA]';
+		};
+	</script>
